@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aleron08.ilearning.view.fragment.TeacherFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/rl_teach_teacher_intro"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <ImageView
+                android:id="@+id/iv_teach_teacher_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:padding="15dp"
+                android:src="@drawable/ic_default_head"/>
+            <TextView
+                android:id="@+id/tv_teach_teacher_name"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/iv_teach_teacher_head"
+                android:gravity="center_vertical"
+                android:text="趣多多"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/tv_teach_teacher_profile"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/tv_teach_teacher_name"
+                android:layout_toRightOf="@id/iv_teach_teacher_head"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="国内知名学者，通识天文地理四书五经等等等等等"/>
+            <ImageView
+                android:id="@+id/iv_teach_teacher_"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_right"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorGray" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_teach_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</FrameLayout>

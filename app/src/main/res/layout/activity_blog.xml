@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.aleron08.ilearning.view.activity.BlogActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:id="@+id/ll_blog_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:orientation="vertical"
+            android:background="@color/colorOrange"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/rl_blog_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/ll_blog_actionbar"
+            android:background="@color/colorOrange">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+                <ImageView
+                    android:id="@+id/iv_blog_back"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:paddingVertical="8dp"
+                    android:src="@mipmap/ic_left" />
+                <TextView
+                    android:id="@+id/tv_blog_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/iv_teach_back"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="未命名用户"
+                    android:textColor="#ffff"
+                    android:textSize="18sp" />
+                <ImageView
+                    android:id="@+id/iv_blog_share"
+                    android:layout_width="25dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:paddingVertical="8dp"
+                    android:layout_marginHorizontal="7dp"
+                    android:src="@mipmap/ic_share" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <ScrollView
+            android:id="@+id/sv_blog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp"
+                    android:layout_marginTop="10dp"
+                    android:text="数据库设计时设计标识字段的一些思考[mysql]"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="10dp">
+                    <ImageView
+                        android:id="@+id/iv_blog_head"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="5dp"
+                        android:layout_alignParentLeft="true"
+                        android:clickable="true"
+                        android:src="@drawable/ic_default_head"/>
+                    <TextView
+                        android:id="@+id/tv_blog_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_blog_head"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="3dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorBlack"
+                        android:text="趣多多"
+                        />
+                    <TextView
+                        android:id="@+id/tv_blog_view_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_blog_head"
+                        android:layout_below="@id/tv_blog_name"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="12sp"
+                        android:text="100"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_blog_view_num"
+                        android:layout_below="@id/tv_blog_name"
+                        android:textSize="12sp"
+                        android:text=" views"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/colorOrange">
+                        <TextView
+                            android:id="@+id/tv_blog_follow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:textColor="@color/colorOrange"
+                            android:background="@color/colorWhite"
+                            android:layout_margin="1dp"
+                            android:text=" +关注 "
+                            android:clickable="true"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorGray"/>
+                <TextView
+                    android:id="@+id/tv_blog_essay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:lineSpacingExtra="5dp"
+                    android:text="场景一：
+问题与分析：
+　　用户是任何系统中最为重要的组成部分之一，在设计存储用户信息时，性别是用户信息的重要组成部分，应该如何存储呢？性别有 “男”、“女”2种情况，如果某个用户没有具体性别数据的话，可以标识为“未知”，因此，每一个用户，性别有“男”、“女”、“未知”共3种情况，我们需要在数据表字段中需要存储这3种情况的一种(实际应用可能需要更多情况以满足具体业务，这里姑且以常见的3种为例)。
+思考与方法：
+　　方法一：在用户信息表中，添加一个性别字段，其数据类型为char，其值为“未知”、“男”、“女”中的一个，当需要使用该值时(前端展示、分析统计等)，直接取出使用即可。
+　　方法二：在用户信息表中，添加一个字段，其数据类型为tinyint（一个字节），其值为 “0”、“1”、“2”，分别对应“未知”、“男”、“女”这3种情况，其中0对应的未知为默认值。当需要使用该值时，可针对不同的使用场景进行简单的转换，如前端需展示时可由数字转换成相应含义文字后再展示。
+　　方法一的优点是语义明确、便于前端展示，不足之处有相对占用存储空间多、数据传输更耗流量等；方法二的优点是相对占用存储空间少、数据传输更省流量、一定程度上有利于数据统计分析，不足之处有展示时需要转换、数字语义需要约定等。笔者个人推荐使用方法二。(换个角度看，需要转换也带来了一定的灵活性，如：若某个业务需要展示性别为“保密”、“帅哥”、“靓女”，这样我们只需修改转换的地方即可，而不需修改数据库数据，这也有利于一个用户中心为不同的具体业务线提供服务)
+
+场景二：
+问题与分析：
+　　电商平台通常会划分商品品类，如服饰类、食品类、数码类、书籍类等等，而有的商品可能具有多个商品品类属性，如智能手机，其既可划为数码类、又可划分为手机类、智能设备类，常见的场景是显示商品所属品类、修改商品的所属品类、查询某个品类下有哪些商品等，在这种情况下，该如何存储呢？
+思考与方法：
+　　假如平台的商品品类共有n种，那么，理论上某个商品的所属品类可能的组合就有[2^n-1]种情况，当然，实际上不会有这么多组合，但像用户选择兴趣爱好之类的场景可能的组合就多了，因此，上文场景一中的2种方法已不再适用。
+　　可行的一个方法是：再引入一个品类关系表，用于存储商品品类与各商品的关系。这样的话，商品信息表本身用一个字符字段直接存储其所属品类信息，以满足基本需求，而操作某个品类下的商品的相关业务，则可通过品类关系表去做；一旦发生数据的变化，则同时维护这2个地方的数据。（事实上，通常的做法是，一件商品最多只能划分为有限的商品品类，一个人最多只能选择有限个兴趣爱好，如：一件商品最多只能所属3种品类，一个人最多只能选5个兴趣爱好）
+
+场景三：
+问题与分析：
+　　在电商系统中，通常会通过各种优惠的方式来促销，如给用户发各种优惠券、积分抵扣等，用户提交订单时可以使用满足条件的各种优惠；那么，如何存储该订单具体使用了哪些优惠信息呢？
+思考与方法：
+　　与以上两种情况有所不同，以上的两种场景更多的业务场景是前端的展示与业务查询，而这种场景更多是标识优惠以计算用户实际所需支付金额，以及为后续业绩统计、制定促销计划、提高用户活跃度等提供数据依据。
+　　这里我们举一个具体例子来逐步分析。
+实例分析：
+假设某平台为A平台，其平台当前可使用的优惠方式有以下几种：
+---------------------
+作者：对门山上
+来源：CSDN
+原文：https://blog.csdn.net/cndmss/article/details/54232738
+版权声明：本文为博主原创文章，转载请附上博文链接！"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
