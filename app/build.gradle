@@ -11,6 +11,13 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //指定生成的apk文件名
+                outputFileName = "ILearning.apk"
+            }
+    }
     buildTypes {
         release {
             minifyEnabled false

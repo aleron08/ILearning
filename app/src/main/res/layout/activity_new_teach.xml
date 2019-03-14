@@ -47,9 +47,16 @@
                     android:textColor="#ffff"
                     android:textSize="18sp" />
                 <TextView
+                    android:id="@+id/tv_new_teach_send"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    />
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="发布"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorDarkGray"
+                    android:gravity="center_vertical"
+                    android:clickable="false"/>
             </RelativeLayout>
         </android.support.v7.widget.Toolbar>
         <android.support.design.widget.CoordinatorLayout
