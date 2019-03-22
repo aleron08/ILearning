@@ -70,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
                 <EditText
+                    android:id="@+id/et_new_blog_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -81,7 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
                     android:background="@color/colorGray"/>
-                <EditText
+                <com.example.aleron08.ilearning.util.PictureEditText
+                    android:id="@+id/pet_new_blog_article"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"

@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.aleron08.ilearning.R;
 import com.example.aleron08.ilearning.bean.UserBean;
+import com.example.aleron08.ilearning.config.ServerConfig;
 import com.example.aleron08.ilearning.util.HttpConnection;
 import com.example.aleron08.ilearning.util.ImmersiveStatusBar;
 import com.example.aleron08.ilearning.util.InternetCheck;
@@ -147,7 +148,7 @@ public class MyInfoActivity extends AppCompatActivity implements View.OnClickLis
                     userBean.setSchool(etSchool.getText().toString());
                     userBean.setMajor(etMajor.getText().toString());
                     userBean.setHobby(etHobby.getText().toString());
-                    String address = "http://40.121.148.51:8080/test07-message/MyInfoServlet";
+                    String address = "http://" + ServerConfig.serverIP + ":" +ServerConfig.port + "/test07-message/MyInfoServlet";
                     HttpConnection.sendUserRequest(address, userBean, new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {

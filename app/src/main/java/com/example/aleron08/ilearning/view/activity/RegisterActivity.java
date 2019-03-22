@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.aleron08.ilearning.R;
 import com.example.aleron08.ilearning.bean.UserBean;
+import com.example.aleron08.ilearning.config.ServerConfig;
 import com.example.aleron08.ilearning.util.HttpConnection;
 import com.example.aleron08.ilearning.util.ImmersiveStatusBar;
 import com.example.aleron08.ilearning.util.InternetCheck;
@@ -143,7 +144,7 @@ public class RegisterActivity extends AppCompatActivity implements IRegisterViw,
                         final UserBean userBean = new UserBean();
                         userBean.setPhone(etPhone.getText().toString());
                         userBean.setPwd(etPwd.getText().toString());
-                        String address = "http://40.121.148.51:8080/test07-message/RegisterServlet";
+                        String address = "http://" + ServerConfig.serverIP + ":" +ServerConfig.port + "/test07-message/RegisterServlet";
                         HttpConnection.sendRegisterRequest(address, userBean,etVerification.getText().toString(),
                                 new okhttp3.Callback() {
 

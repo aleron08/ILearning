@@ -160,6 +160,7 @@ public class DiscoverFragment extends Fragment implements IDiscoverView, View.On
         switch (view.getId()){
             case R.id.iv_discover_add:
                 intent = new Intent(getContext(), NewBlogActivity.class);
+                startActivity(intent);
                 break;
         }
     }
